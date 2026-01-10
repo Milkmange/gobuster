@@ -196,7 +196,7 @@ func (s *GobusterGCS) ProcessWord(ctx context.Context, word string, progress *li
 				if i > 0 {
 					extraStrBuilder.WriteString(", ")
 				}
-				_, err := fmt.Fprintf(&extraStrBuilder, "%s (%sb), ", x.Name, x.Size)
+				_, err := fmt.Fprintf(&extraStrBuilder, "%s (%sb)", x.Name, x.Size)
 				if err != nil {
 					return nil, fmt.Errorf("fmt.Fprintf to strings.Builder failed: %w", err)
 				}
